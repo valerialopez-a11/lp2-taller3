@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>taller 3</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilo.css') }}"
+      integrity="sha384-<hash>"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      {% for nombre in nombres %}
+      <div class="tablas">
+        <img
+          src="{{ url_for('static', filename=nombre) }}"
+          width="600px"
+        /><br />
+      </div>
+      {% endfor %}
+      <button>
+        <a href="{{ url_for('actualizar_datos') }}">Actualizar</a>
+    </div>
+    </button>
+  </body>
+</html>
